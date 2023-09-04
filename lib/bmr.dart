@@ -25,6 +25,26 @@ class _BmrWidgetState extends State<BmrWidget>
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Stack(
+      children: [
+        Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.redAccent, width: 0.5)),
+              child: Row(
+                children: [
+                  Text(
+                    "BMR CALCULATOR",
+                    style: TextStyle(color: Colors.blueAccent),
+                  ),
+                ],
+              ),
+            )
+          ],
+        )
+      ],
+    );
   }
 }
